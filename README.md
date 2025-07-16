@@ -8,7 +8,7 @@
 
 > **Lightweight SVG icon collection for React with zero dependencies**
 
-![Library Preview](<img width="560" height="447" alt="image" src="https://github.com/user-attachments/assets/385318e9-1fb9-432b-b912-2228513049f0" />)
+<img width="560" height="447" alt="image" src="https://github.com/user-attachments/assets/385318e9-1fb9-432b-b912-2228513049f0" />
 
 ## ✨ Features
 
