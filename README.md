@@ -1,104 +1,130 @@
-<img width="581" height="544" alt="image" src="https://github.com/user-attachments/assets/8b0196a4-36c4-4f7b-9751-72d5f4f76e88" />
-
 
 # SVG Icons by Dreamsoftware
 
-[![npm version](https://img.shields.io/npm/v/svg-by-dreamsoftware.svg)](https://www.npmjs.com/package/svg-by-dreamsoftware)
-[![downloads](https://img.shields.io/npm/dm/svg-by-dreamsoftware.svg)](https://www.npmjs.com/package/svg-by-dreamsoftware)
-[![license](https://img.shields.io/github/license/dmitriyg0r/icons)](https://github.com/dmitriyg0r/icons)
+[![npm version](https://img.shields.io/npm/v/svg-by-dreamsoftware.svg?style=flat-square)](https://www.npmjs.com/package/svg-by-dreamsoftware)
+[![downloads](https://img.shields.io/npm/dm/svg-by-dreamsoftware.svg?style=flat-square)](https://www.npmjs.com/package/svg-by-dreamsoftware)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/svg-by-dreamsoftware?style=flat-square)](https://bundlephobia.com/package/svg-by-dreamsoftware)
+[![license](https://img.shields.io/github/license/dmitriyg0r/icons?style=flat-square)](https://github.com/dmitriyg0r/icons)
 
-> **Современная коллекция SVG-иконок для React**
+> **Lightweight SVG icon collection for React with zero dependencies**
 
-Универсальная библиотека иконок для ваших проектов. Все иконки доступны как готовые React-компоненты и как отдельные SVG-файлы. Легко интегрируются, кастомизируются и подходят для любых задач.
+![Library Preview](https://private-user-images.githubusercontent.com/62027285/466749602-8b0196a4-36c4-4f7b-9751-72d5f4f76e88.png)
 
----
+## ✨ Features
 
-## 🚀 Возможности
+✅ **13+ Essential Icons** (Arrow, Calendar, Chat, Check, etc.)  
+✅ **React Components** & Raw SVG files  
+✅ **Customizable** via props (size, color, className)  
+✅ **Tree-shakable** - import only what you need  
+✅ **TypeScript Support** out of the box  
+✅ **Works with** Vite, Next.js, CRA, Gatsby  
 
-- Более 10 популярных иконок (Arrow, Calendar, Chat, Check, Download, Pencil, Plus, Profile, Search, Send, Settings, Trash, Update)
-- Готовые React-компоненты (JS, без JSX)
-- Легкая кастомизация размеров и цвета через props
-- Поддержка любых сборщиков (Vite, CRA, Next.js и др.)
-- Импорт только нужных иконок для оптимизации размера бандла
-- Можно использовать как отдельные SVG-файлы
+## 🚀 Quick Start
 
----
-
-## 📦 Установка
-
-```sh
+### Installation
+```bash
 npm install svg-by-dreamsoftware
+# or
+yarn add svg-by-dreamsoftware
 ```
 
----
-
-## 🛠 Использование в React
-
-Импортируйте нужные иконки напрямую из пакета:
-
+### Basic Usage
 ```jsx
-import { Calendar, Profile, Search, Trash } from 'svg-by-dreamsoftware/icons-react-dist';
+import { Search, Profile } from 'svg-by-dreamsoftware/icons-react-dist';
 
-function App() {
+export default function App() {
   return (
-    <>
-      <Calendar width={32} height={32} fill="#4F46E5" />
-      <Profile width={24} height={24} style={{ color: 'tomato' }} />
-    </>
+    <div>
+      <Search width={24} fill="#3b82f6" />
+      <Profile className="icon-profile" />
+    </div>
   );
 }
 ```
 
-**Кастомизация:**
-- `width`, `height` — размеры
-- `fill` или `style={{ color: ... }}` — цвет
+## 🔧 API Reference
 
----
+### Common Props
+| Prop      | Type     | Default | Description                     |
+|-----------|----------|---------|---------------------------------|
+| `width`   | number   | 24      | Icon width in px                |
+| `height`  | number   | 24      | Icon height in px               |
+| `fill`    | string   | currentColor | Color value              |
+| `className` | string | -       | Custom CSS class                |
+| `style`   | object   | -       | Inline styles                   |
 
-## 📁 Список иконок
+## 🎨 Customization Examples
 
-- Arrow
-- Calendar
-- Chat
-- Check
-- Download
-- Pencil
-- Plus
-- Profile
-- Search
-- Send
-- Settings
-- Trash
-- Update
-
-_(Смотрите содержимое папки icons-react-dist для полного списка)_
-
----
-
-## ⚡ Пример SVG
-
-```svg
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M12 2L15 8H21L16.5 12L18 18L12 14.5L6 18L7.5 12L3 8H9L12 2Z" fill="currentColor"/>
-</svg>
+### Change color and size
+```jsx
+<Calendar width={32} height={32} fill="#10b981" />
 ```
 
----
+### Use CSS classes
+```jsx
+<Settings className="icon-settings" />
+```
+```css
+.icon-settings {
+  color: #f59e0b;
+  transition: all 0.3s ease;
+}
 
-## 🤝 Вклад в проект
+.icon-settings:hover {
+  color: #ef4444;
+  transform: rotate(45deg);
+}
+```
 
-Будем рады вашим PR и идеям! Открывайте issues или предлагайте новые иконки.
+### Use as SVG file
+```js
+import calendarIcon from 'svg-by-dreamsoftware/icons-svg-dist/calendar.svg';
+```
 
----
+## 📦 Bundle Optimization
 
-## 📜 Лицензия
+Import only needed icons to reduce bundle size:
+```jsx
+import Search from 'svg-by-dreamsoftware/icons-react-dist/Search';
+// Instead of:
+// import { Search } from 'svg-by-dreamsoftware/icons-react-dist';
+```
 
-MIT
+## 🤔 FAQ
 
----
+### Q: How to add new icons?
+A: Open an issue with your icon request or submit a PR!
 
-## 💜 Поддержать проект
+### Q: Can I use these in Vue/Angular?
+A: Yes! Use the raw SVG files from `icons-svg-dist` folder.
 
-[Donationalerts](https://www.donationalerts.com/r/dmitriygor)
+### Q: Why my icons don't change color?
+A: Make sure your SVG uses `fill="currentColor"` and you're applying color via CSS or `fill` prop.
 
-[GitHub проекта](https://github.com/dmitriyg0r/icons)
+## 🌟 Pro Tips
+
+1. **Animate icons** using CSS transitions
+2. **Combine with Tailwind** for quick styling
+3. **Lazy load** icons for better performance
+4. **Use CSS variables** for theme support
+
+## 🤝 Contributing
+
+We welcome contributions! Please follow these steps:
+1. Fork the repository
+2. Add your new icons to `/src` folder
+3. Run `npm build`
+4. Submit a PR
+
+See our [contribution guide](CONTRIBUTING.md) for details.
+
+## 📜 License
+
+MIT © [Dmitriy Gordienko](https://github.com/dmitriyg0r)
+
+## 💖 Support the Project
+
+If you find this useful, please consider:
+- [GitHub Star](https://github.com/dmitriyg0r/icons)
+- [Donate via Donationalerts](https://www.donationalerts.com/r/dmitriygor)
+- Share with your colleagues
