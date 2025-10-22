@@ -6,7 +6,7 @@
 [![bundle size](https://img.shields.io/bundlephobia/minzip/svg-by-dreamsoftware?style=flat-square)](https://bundlephobia.com/package/svg-by-dreamsoftware)
 [![license](https://img.shields.io/github/license/dmitriyg0r/icons?style=flat-square)](https://github.com/dmitriyg0r/icons)
 
-> **Lightweight SVG icon collection for React with zero dependencies**
+> **Lightweight, modern SVG icon library for React — fast, flexible, and dependency-free.**
 
 <img width="560" height="447" alt="image" src="https://github.com/user-attachments/assets/385318e9-1fb9-432b-b912-2228513049f0" />
 
