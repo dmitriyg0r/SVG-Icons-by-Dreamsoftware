@@ -129,22 +129,4 @@ If you find this useful, please consider:
 - [Donate via Donationalerts](https://www.donationalerts.com/r/dmitriygor)
 - Share with your colleagues
 
-## 📺 Installation
 
-Install the package via npm or yarn:
-```bash
-npm install svg-by-dreamsoftware
-# or
-yarn add svg-by-dreamsoftware
-```
-
-## 🛠 Usage Example
-
-After installation, import an icon in your React component:
-```jsx
-import { Search } from 'svg-by-dreamsoftware/icons-react-dist';
-
-function MyComponent() {
-  return <Search size={24} color="currentColor" />;
-}
-```
